@@ -45,6 +45,12 @@ namespace Leave_Management_netCore.Repository
             throw new NotImplementedException();
         }
 
+        public bool IsExists(int id)
+        {
+            var exists = _db.LeaveTypes.Any(x => x.Id == id);
+            return exists;
+        }
+
         public bool Save()
         {
             //return _db.SaveChanges() > 0;

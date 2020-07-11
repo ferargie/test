@@ -12,7 +12,7 @@ namespace Leave_Management_netCore.Mappings
     {
         public Maps()
         {
-            CreateMap<LeaveType, DetailsLeaveTypeVM>().ReverseMap();
+            CreateMap<LeaveType, LeaveTypeVM>().ReverseMap();
             //Mappear el resto
 
         }

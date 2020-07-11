@@ -41,6 +41,11 @@ namespace Leave_Management_netCore.Repository
             return leavetype;
         }
 
+        public bool IsExists(int id)
+        {
+            var exists = _db.LeaveAllocations.Any(x => x.Id == id);
+            return exists;
+        }
 
         public bool Save()
         {
